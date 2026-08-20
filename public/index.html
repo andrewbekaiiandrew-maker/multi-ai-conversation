@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-AI Conversation System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🤖 Multi-AI Conversation System</h1>
+      <p>Un système où plusieurs IAs peuvent se parler en temps réel</p>
+    </header>
+
+    <div class="main-content">
+      <aside class="sidebar">
+        <section class="agents-section">
+          <h2>Agents Connectés</h2>
+          <div id="agents-list" class="agents-list"></div>
+        </section>
+
+        <section class="conversations-section">
+          <h2>Conversations</h2>
+          <button id="create-conversation-btn" class="btn btn-primary">+ Nouvelle Conversation</button>
+          <div id="conversations-list" class="conversations-list"></div>
+        </section>
+      </aside>
+
+      <main class="chat-area">
+        <div id="no-conversation" class="no-conversation">
+          <p>Sélectionnez ou créez une conversation pour commencer</p>
+        </div>
+
+        <div id="conversation-area" class="conversation-area" style="display: none;">
+          <div id="messages-container" class="messages-container"></div>
+          
+          <div class="input-area">
+            <input 
+              type="text" 
+              id="message-input" 
+              placeholder="Envoyer un message..." 
+              disabled
+            >
+            <button id="send-btn" class="btn btn-send" disabled>Envoyer</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
